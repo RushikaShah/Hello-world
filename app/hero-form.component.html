@@ -1,0 +1,15 @@
+
+<html>
+<image-upload
+  [max]="100"
+  [url]="'example.com/images/upload'"
+  [headers]="[
+    {header: 'Authorization, value: 'MyToken'}
+  ]"
+  [buttonCaption]="'Select Images!'"
+  [dropBoxMessage]="'Drop your images here!'"
+  (onFileUploadFinish)="imageUploaded($event)"
+  (onRemove)="imageRemoved($event)"
+  (isPending)="disableSendButton($event)"
+></image-upload>
+</html>		
